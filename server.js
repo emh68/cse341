@@ -1,12 +1,11 @@
 const express = require('express');
 const app = express();
-const port = 8080;
-const homeController = require('./controllers/homeController');
+const port = 3000;
 
-// Define route for home page
-app.get('/', homeController.getHome);
+// Create route
+app.use('/', require('./routes/home.js'));
 
-// Start server
+// Start server and listen for requests
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });

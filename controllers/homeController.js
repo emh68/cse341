@@ -1,6 +1,6 @@
-// Function to handle home page response
-function getHome(req,res) {
-    res.send("Johnny Ringo");
+// // Function to handle home page response
+const responseFunction = (req, res, next) => {
+    res.send('Johnny Ringo');
 };
 
-module.exports = {getHome};
+module.exports = responseFunction;
