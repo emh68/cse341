@@ -1,19 +1,20 @@
 const express = require('express');
 const app = express();
 const port = 8080;
-const contactsRoute = require('./routes/contacts.js');
-// const mongodb = require('./db/connect');
+const env = require("dotenv").config();
+const contacts = require('./routes/contacts');
+const mongodb = require('./db/connect');
 const cors = require('cors');
 
 app.use(cors());
-app.use("/contacts", contactsRoute)
+app.use("/contacts", contacts)
 
-// mongodb.initDb((err, db) => {
-//     if (err) {
-//         console.log(err);
-//     } else {
+mongodb.initDb((err, db) => {
+    if (err) {
+        console.log(err);
+    } else {
       app.listen(port, () => {
         console.log(`app listening on http://localhost:${port}`);
       });
-//     }
-// });
+    }
+});

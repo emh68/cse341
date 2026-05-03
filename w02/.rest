@@ -1,1 +1,11 @@
+### Get all contacts (local)
 GET http://localhost:8080/contacts
+
+### Get all contacts (Render)
+GET https://cse341w02-bjre.onrender.com/contacts
+
+### Get single contact by id (local)
+GET http://localhost:8080/contacts/69f559c6ef036d01fbf74c34
+
+### Get single contact by id (Render)
+GET https://cse341w02-bjre.onrender.com/contacts/69f559c6ef036d01fbf74c34
