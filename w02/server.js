@@ -9,11 +9,11 @@ app.use(cors());
 app.use("/contacts", contacts)
 
 mongodb.initDb((err, db) => {
-    if (err) {
-        console.log(err);
-    } else {
-      app.listen(port, () => {
-        console.log(`app listening on http://localhost:${port}`);
-      });
-    }
+  if (err) {
+    console.log(err);
+  } else {
+    app.listen(port, () => {
+      console.log(`app listening on http://localhost:${port}`);
+    });
+  }
 });

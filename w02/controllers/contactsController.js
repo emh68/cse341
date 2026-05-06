@@ -1,13 +1,22 @@
 const mongodb = require('../db/connect');
-const {ObjectId} = require('mongodb');
+const { ObjectId } = require('mongodb');
 
-async function getContacts(req, res, next) {
+// GET All
+async function getAllContacts(req, res, next) {
+  try {
+    const db = mongodb.getDb();
+    const contacts = await db.collection('contacts').find().toArray();
+    res.json(contacts);
+  } catch (error) {
+    next(error);
+  }
+}
+
+// GET one contact
+async function getSingleContact(req, res, next) {
   try {
     const db = mongodb.getDb();
     const collection = db.collection('contacts');
-
-  // GET one contact
-  if(req.params.id) {
     const contact = await collection.findOne({
       _id: new ObjectId(req.params.id)
     });
@@ -17,14 +26,9 @@ async function getContacts(req, res, next) {
     }
 
     return res.json(contact);
-  }
- 
-  // GET All
- const contacts = await collection.find().toArray();
- res.json(contacts);
-  } catch(error) {
+  } catch (error) {
     next(error);
   }
 };
 
-module.exports = { getContacts };
+module.exports = { getAllContacts, getSingleContact };
