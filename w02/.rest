@@ -60,7 +60,7 @@ GET https://cse341w02-bjre.onrender.com/contacts
 GET https://cse341w02-bjre.onrender.com/contacts/69f559c6ef036d01fbf74c34
 
 ### UPDATE contact
-PUT https://cse341w02-bjre.onrender.com/contacts/69f559c6ef036d01fbf74c34
+PUT https://cse341w02-bjre.onrender.com/contacts/69f559c6ef036d01fbf74c35
 Content-Type: application/json
 
 # {
@@ -71,11 +71,11 @@ Content-Type: application/json
 #     "birthday": "07-02-1984"
 # }
 {
-  "firstName": "Eli",
-  "lastName": "Hansen",
-  "email": "test@example.com",
-  "favoriteColor": "Blue",
-  "birthday": "01-30-1982"
+    "firstName": "Mark",
+    "lastName": "Roberts",
+    "email": "mroberts@example.com",
+    "favoriteColor": "Turquoise",
+    "birthday": "11-14-2020"
 }
 
 
