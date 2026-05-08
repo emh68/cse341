@@ -50,6 +50,7 @@ Content-Type: application/json
     "lastName": "Smith",
     "email": "msmith@example.com",
     "favoriteColor": "Blue",
+    "birthday": "04-28-1990"
 }
 
 ### READ all contacts
