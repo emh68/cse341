@@ -42,7 +42,7 @@ DELETE http://localhost:8080/contacts/69fe5c0a129d0856bfd6f235
 //////////////////
 
 ### CREATE contact
-POST http://cse341w02-bjre.onrender.com/contacts
+POST https://cse341w02-bjre.onrender.com/contacts
 Content-Type: application/json
 
 {
@@ -54,13 +54,13 @@ Content-Type: application/json
 }
 
 ### READ all contacts
-GET http://cse341w02-bjre.onrender.com/contacts
+GET https://cse341w02-bjre.onrender.com/contacts
 
 ### READ single contact by id
-GET http://cse341w02-bjre.onrender.com/contacts/69f559c6ef036d01fbf74c34
+GET https://cse341w02-bjre.onrender.com/contacts/69f559c6ef036d01fbf74c34
 
 ### UPDATE contact
-PUT http://cse341w02-bjre.onrender.com/contacts/69f559c6ef036d01fbf74c34
+PUT https://cse341w02-bjre.onrender.com/contacts/69f559c6ef036d01fbf74c34
 Content-Type: application/json
 
 # {
@@ -80,5 +80,5 @@ Content-Type: application/json
 
 
 ### DELETE contact
-DELETE http://cse341w02-bjre.onrender.com/contacts/69fd21d03d488cdc28d97b02
+DELETE https://cse341w02-bjre.onrender.com/contacts/69fd21d03d488cdc28d97b02
 
