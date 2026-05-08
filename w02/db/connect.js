@@ -1,4 +1,4 @@
-const { MongoClient} = require('mongodb');
+const { MongoClient } = require('mongodb');
 require('dotenv').config();
 
 const client = new MongoClient(process.env.MONGODB_URI);
@@ -14,4 +14,4 @@ const initDb = (callback) => {
 
 const getDb = () => db;
 
-module.exports = {initDb, getDb};
+module.exports = { initDb, getDb };

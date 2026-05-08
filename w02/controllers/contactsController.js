@@ -1,7 +1,7 @@
 const mongodb = require('../db/connect');
 const { ObjectId } = require('mongodb');
 
-// GET All
+// GET All (Read All)
 async function getAllContacts(req, res, next) {
   try {
     const db = mongodb.getDb();
@@ -12,7 +12,7 @@ async function getAllContacts(req, res, next) {
   }
 }
 
-// GET one contact
+// GET one contact (Read One)
 async function getSingleContact(req, res, next) {
   try {
     const db = mongodb.getDb();
@@ -31,4 +31,51 @@ async function getSingleContact(req, res, next) {
   }
 };
 
-module.exports = { getAllContacts, getSingleContact };
+// POST contact (Create)
+async function createContact(req, res, next) {
+  try {
+    const db = mongodb.getDb();
+    const { firstName, lastName, email, favoriteColor, birthday } = req.body;
+
+    //Check if any required field is missing
+    if (!firstName || !lastName || !email || !favoriteColor || !birthday) {
+      return res.status(400).json({ message: "All fields are required. Please check your data." });
+    }
+    const result = await db.collection('contacts').insertOne({ firstName, lastName, email, favoriteColor, birthday });
+
+    res.status(201).json({ insertedId: result.insertedId });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// DELETE contact (delete)
+async function deleteContact(req, res, next) {
+  try {
+    const db = mongodb.getDb();
+    const collection = db.collection('contacts');
+    const result = await collection.deleteOne({ _id: new ObjectId(req.params.id) });
+
+    res.status(200).json(result);
+  } catch (error) {
+    next(error);
+  }
+}
+
+// PUT contact (Update)
+async function updateContact(req, res, next) {
+  try {
+    const db = mongodb.getDb();
+    const collection = db.collection('contacts');
+    const { firstName, lastName, email, favoriteColor, birthday } = req.body
+    const result = await collection.updateOne({
+      _id: new ObjectId(req.params.id)
+    }, { $set: { firstName, lastName, email, favoriteColor, birthday } });
+
+    res.status(204).json(result)
+  } catch (error) {
+    next(error);
+  }
+}
+
+module.exports = { getAllContacts, getSingleContact, createContact, deleteContact, updateContact };

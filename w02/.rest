@@ -1,11 +1,84 @@
-### Get all contacts (local)
+/////////////////
+// LOCALHOST
+////////////////
+
+### CREATE contact (local)
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Michelle",
+    "lastName": "Smith",
+    "email": "msmith@example.com",
+    "favoriteColor": "Blue",
+    "birthday": "04-28-1990"
+}
+
+### READ all contacts
 GET http://localhost:8080/contacts
 
-### Get all contacts (Render)
-GET https://cse341w02-bjre.onrender.com/contacts
-
-### Get single contact by id (local)
+### READ single contact by id (local)
 GET http://localhost:8080/contacts/69f559c6ef036d01fbf74c34
 
-### Get single contact by id (Render)
-GET https://cse341w02-bjre.onrender.com/contacts/69f559c6ef036d01fbf74c34
+### UPDATE contact (local)
+PUT http://localhost:8080/contacts/69fe5c0a129d0856bfd6f235
+Content-Type: application/json
+
+{
+    "firstName": "Rachel",
+    "lastName": "Richards",
+    "email": "rrichards@example.com",
+    "favoriteColor": "Green",
+    "birthday": "07-02-1984"
+}
+
+### DELETE contact (local)
+DELETE http://localhost:8080/contacts/69fe5c0a129d0856bfd6f235
+
+
+
+///////////////////
+// PRODUCTION
+//////////////////
+
+### CREATE contact
+POST http://cse341w02-bjre.onrender.com/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Michelle",
+    "lastName": "Smith",
+    "email": "msmith@example.com",
+    "favoriteColor": "Blue",
+    "birthday": "04-28-1990"
+}
+
+### READ all contacts
+GET http://cse341w02-bjre.onrender.com/contacts
+
+### READ single contact by id
+GET http://cse341w02-bjre.onrender.com/contacts/69f559c6ef036d01fbf74c34
+
+### UPDATE contact
+PUT http://cse341w02-bjre.onrender.com/contacts/69f559c6ef036d01fbf74c34
+Content-Type: application/json
+
+# {
+#     "firstName": "Rachel",
+#     "lastName": "Richards",
+#     "email": "rrichards@example.com",
+#     "favoriteColor": "Green",
+#     "birthday": "07-02-1984"
+# }
+{
+  "firstName": "Eli",
+  "lastName": "Hansen",
+  "email": "test@example.com",
+  "favoriteColor": "Blue",
+  "birthday": "01-30-1982"
+}
+
+
+### DELETE contact
+DELETE http://cse341w02-bjre.onrender.com/contacts/69fd21d03d488cdc28d97b02
+
