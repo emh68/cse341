@@ -49,7 +49,8 @@ Content-Type: application/json
     "firstName": "Michelle",
     "lastName": "Smith",
     "email": "msmith@example.com",
-    "favoriteColor": "Blue"
+    "favoriteColor": "Blue",
+    "birthday": "04-28-1990"
 }
 
 ### READ all contacts
