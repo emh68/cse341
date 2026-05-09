@@ -33,7 +33,7 @@ Content-Type: application/json
 }
 
 ### DELETE contact (local)
-DELETE http://localhost:8080/contacts/69fe936d0deca7097767d086
+DELETE http://localhost:8080/contacts/69fe95d708e2d12f7af93f2c
 
 
 
@@ -49,8 +49,7 @@ Content-Type: application/json
     "firstName": "Michelle",
     "lastName": "Smith",
     "email": "msmith@example.com",
-    "favoriteColor": "Blue",
-    "birthday": "04-28-1990"
+    "favoriteColor": "Blue"
 }
 
 ### READ all contacts
@@ -60,7 +59,7 @@ GET https://cse341w02-bjre.onrender.com/contacts
 GET https://cse341w02-bjre.onrender.com/contacts/69f559c6ef036d01fbf74c34
 
 ### UPDATE contact
-PUT https://cse341w02-bjre.onrender.com/contacts/69fe73477fb1e2752357b19c
+PUT https://cse341w02-bjre.onrender.com/contacts/69fe954276bf78ca2a95a612
 Content-Type: application/json
 
 {
@@ -72,5 +71,5 @@ Content-Type: application/json
 }
 
 ### DELETE contact
-DELETE https://cse341w02-bjre.onrender.com/contacts/69fe73477fb1e2752357b19c
+DELETE https://cse341w02-bjre.onrender.com/contacts/69fe954276bf78ca2a95a612
 
