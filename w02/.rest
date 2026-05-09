@@ -33,7 +33,7 @@ Content-Type: application/json
 }
 
 ### DELETE contact (local)
-DELETE http://localhost:8080/contacts/69fe72663e56cfbb53cd57b3
+DELETE http://localhost:8080/contacts/69fe936d0deca7097767d086
 
 
 
@@ -49,8 +49,7 @@ Content-Type: application/json
     "firstName": "Michelle",
     "lastName": "Smith",
     "email": "msmith@example.com",
-    "favoriteColor": "Blue",
-    "birthday": "04-28-1990"
+    "favoriteColor": "Blue"
 }
 
 ### READ all contacts
