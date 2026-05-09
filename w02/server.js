@@ -10,7 +10,7 @@ app.use(express.json());
 app.use("/", contacts)
 
 
-mongodb.initDb((err, db) => {
+mongodb.initDb((err) => {
   if (err) {
     console.log(err);
   } else {

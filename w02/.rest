@@ -33,7 +33,7 @@ Content-Type: application/json
 }
 
 ### DELETE contact (local)
-DELETE http://localhost:8080/contacts/69fe5c0a129d0856bfd6f235
+DELETE http://localhost:8080/contacts/69fe72663e56cfbb53cd57b3
 
 
 
@@ -60,7 +60,7 @@ GET https://cse341w02-bjre.onrender.com/contacts
 GET https://cse341w02-bjre.onrender.com/contacts/69f559c6ef036d01fbf74c34
 
 ### UPDATE contact
-PUT https://cse341w02-bjre.onrender.com/contacts/69fe6b599daeabdf9cbb168b
+PUT https://cse341w02-bjre.onrender.com/contacts/69fe73477fb1e2752357b19c
 Content-Type: application/json
 
 {
@@ -72,5 +72,5 @@ Content-Type: application/json
 }
 
 ### DELETE contact
-DELETE https://cse341w02-bjre.onrender.com/contacts/69fe6b599daeabdf9cbb168b
+DELETE https://cse341w02-bjre.onrender.com/contacts/69fe73477fb1e2752357b19c
 
