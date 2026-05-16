@@ -5,7 +5,7 @@ const doc = {
         title: "Contacts API",
         description: "Contacts API Documentation",
     },
-    host: 'https://cse341w02-bjre.onrender.com/',
+    host: 'cse341w02-bjre.onrender.com',
     schemes: ['https'],
     definitions: {
         Contact: {
