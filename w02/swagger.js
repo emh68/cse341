@@ -13,7 +13,7 @@ const doc = {
             lastName: "Doe",
             email: "johndoe@example.com",
             favoriteColor: "Blue",
-            birthday: "1990-01-01"
+            birthday: "01-01-1990"
         }
     }
 };
