@@ -4,7 +4,6 @@ const { getAllContacts, getSingleContact, createContact, deleteContact, updateCo
 
 router.get('/', getAllContacts);
 router.get('/:id', getSingleContact);
-// router.post('/', createContact);
 router.post('/', (req, res, next) => {
     /* #swagger.parameters['body'] = {
         in: 'body',
@@ -13,7 +12,6 @@ router.post('/', (req, res, next) => {
     } */
     createContact(req, res, next)
 });
-// router.put('/:id', updateContact);
 router.put('/:id', (req, res, next) => {
     /* #swagger.parameters['body'] = {
         in: 'body',
