@@ -52,11 +52,18 @@ async function createContact(req, res, next) {
 // DELETE contact (delete)
 async function deleteContact(req, res, next) {
   try {
+
+    // Debugging
+    console.log("---> FRONT END IS SENDING THIS ID TEXT: ", req.params.id);
     const db = mongodb.getDb();
     const collection = db.collection('contacts');
     const result = await collection.deleteOne({ _id: new ObjectId(req.params.id) });
 
-    res.status(200).json(result);
+    if (result.deletedCount === 0) {
+      return res.status(404).json({ message: "Contact not found in database. Nothing was deleted." });
+    }
+
+    return res.status(200).json({ message: "Contact successfully deleted from database." });
   } catch (error) {
     next(error);
   }
@@ -72,7 +79,11 @@ async function updateContact(req, res, next) {
       _id: new ObjectId(req.params.id)
     }, { $set: { firstName, lastName, email, favoriteColor, birthday } });
 
-    res.status(204).json(result)
+    if (result.matchedCount === 0) {
+      return res.status(404).json({ message: "Contact not found in database. Nothing updated." });
+    }
+
+    res.status(200).json({ message: "Contact successfully updated in database." });
   } catch (error) {
     next(error);
   }
