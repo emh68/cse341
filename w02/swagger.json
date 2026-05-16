@@ -5,7 +5,7 @@
     "description": "Contacts API Documentation",
     "version": "1.0.0"
   },
-  "host": "https://cse341w02-bjre.onrender.com/",
+  "host": "cse341w02-bjre.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -126,7 +126,7 @@
         },
         "birthday": {
           "type": "string",
-          "example": "1990-01-01"
+          "example": "01-01-1990"
         }
       }
     }
