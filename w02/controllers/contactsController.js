@@ -52,9 +52,6 @@ async function createContact(req, res, next) {
 // DELETE contact (delete)
 async function deleteContact(req, res, next) {
   try {
-
-    // Debugging
-    console.log("---> FRONT END IS SENDING THIS ID TEXT: ", req.params.id);
     const db = mongodb.getDb();
     const collection = db.collection('contacts');
     const result = await collection.deleteOne({ _id: new ObjectId(req.params.id) });
